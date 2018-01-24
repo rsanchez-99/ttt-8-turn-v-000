@@ -19,6 +19,7 @@ end
 
 def input_to_index(user_input)
   index = user_input.to_i - 1
+  return index
 end
 
 def move(board, index, character = "X")
@@ -32,6 +33,7 @@ def turn(board)
 
   if valid_move?(board, index)
     move(board, index)
+    display_board(board)
   else
     turn(board)
   end
